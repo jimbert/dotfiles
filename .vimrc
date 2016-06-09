@@ -1,10 +1,13 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype on
+syntax on
+filetype plugin indent on
 
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set softtabstop=2
+
 set clipboard=unnamed
 set hls
 set cursorline
@@ -12,6 +15,13 @@ set cursorcolumn
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let NERDTreeShowHidden=1
+let g:ackprg = 'ag --nogroup --nocolor --column'
+set noswapfile
+
+set ruler
+set number
+
+let g:airline_theme='dark'
 
 " Mouse {{{
  set ttyfast
@@ -59,6 +69,10 @@ Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 
 
@@ -68,10 +82,14 @@ if argc() == 0
 autocmd vimenter * NERDTree
 end
 
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+highlight Normal ctermbg=None
+
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -80,18 +98,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-set noswapfile
-syntax enable
-
-set ruler
-set number
-
-set background=dark
-let g:solarized_termcolors = 256
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
 
 let mapleader=","
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
