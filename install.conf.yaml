@@ -6,6 +6,7 @@
     ~/.bash_profile: .bash_profile
     ~/.irbrc: .irbrc
     ~/.ackrc: .ackrc
+    ~/.gitignore_global: .gitignore_global
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
