@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: .vimrc
+    ~/.bashrc: .bashrc
+    ~/.bash_profile: .bash_profile
+    ~/.irbrc: .irbrc
+    ~/.ackrc: .ackrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
