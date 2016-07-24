@@ -9,6 +9,7 @@
     ~/.gitignore_global: .gitignore_global
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
+    ~/.tmux.conf: .tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

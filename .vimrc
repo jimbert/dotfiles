@@ -26,6 +26,7 @@ set foldlevel=1         "this is just what i use
 nnoremap <Space> za
 
 let g:formatdef_rbeautify = '"ruby-beautify ".(&expandtab ? "-s -c ".shiftwidth() : "-t")'
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 set ruler
 set number
@@ -72,6 +73,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 " Rails vim
 Plugin 'tpope/vim-rails'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
