@@ -54,7 +54,7 @@ POWERLINE_NO_BLANK_LINE="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github brew osx zsh-syntax-highlighting fasd)
+plugins=(git colored-man colorize heroku rvm vundle aws brew osx zsh-syntax-highlighting fasd)
 
 # User configuration
 
