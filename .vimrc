@@ -8,7 +8,7 @@ set shiftwidth=2
 set expandtab
 set softtabstop=2
 
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus,autoselect
 set hls
 set cursorline
 set cursorcolumn
@@ -17,6 +17,15 @@ autocmd GUIEnter * set visualbell t_vb=
 let NERDTreeShowHidden=1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 set noswapfile
+let g:ctrlp_show_hidden = 1
+"folding settings
+set foldmethod=syntax   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+nnoremap <Space> za
+
+let g:formatdef_rbeautify = '"ruby-beautify ".(&expandtab ? "-s -c ".shiftwidth() : "-t")'
 
 set ruler
 set number
