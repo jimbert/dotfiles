@@ -30,8 +30,6 @@ let g:formatdef_rbeautify = '"ruby-beautify ".(&expandtab ? "-s -c ".shiftwidth(
 set ruler
 set number
 
-let g:airline_theme='dark'
-
 " Mouse {{{
  set ttyfast
  set ttymouse=xterm2
@@ -43,6 +41,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
 " Search
 nmap \ :Ack! 
 
@@ -67,7 +66,6 @@ Plugin 'flazz/vim-colorschemes'
 " Autoformatting
 Plugin 'Chiel92/vim-autoformat'
 " All of your Plugins must be added before the following line
-Plugin 'jpo/vim-railscasts-theme'
 " Multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
 " Surround
@@ -80,8 +78,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 
 
