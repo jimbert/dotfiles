@@ -8,6 +8,7 @@
     ~/.ackrc: .ackrc
     ~/.gitignore_global: .gitignore_global
     ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
