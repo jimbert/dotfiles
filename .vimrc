@@ -8,6 +8,8 @@ set shiftwidth=2
 set expandtab
 set softtabstop=2
 
+set incsearch
+
 set clipboard=unnamed,unnamedplus,autoselect
 set hls
 set cursorline
