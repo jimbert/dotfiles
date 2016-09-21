@@ -54,8 +54,6 @@ call vundle#begin()
 
 " Plug-in manager
 Plugin 'VundleVim/Vundle.vim'
-" Git
-Plugin 'tpope/vim-fugitive'
 " Project search
 Plugin 'mileszs/ack.vim'
 " File search
@@ -64,8 +62,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 " Relative line numbers
 Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
-" Color Scheme
-Plugin 'flazz/vim-colorschemes' 
+" Solarized Black
+Plugin 'dolph/vim-colors-solarized-black'
 " Autoformatting
 Plugin 'Chiel92/vim-autoformat'
 " All of your Plugins must be added before the following line
@@ -75,6 +73,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 " Rails vim
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-endwise'
@@ -83,6 +82,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'wesQ3/vim-windowswap'
+
 call vundle#end()            " required
 
 

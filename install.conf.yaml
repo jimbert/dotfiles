@@ -10,6 +10,7 @@
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
+    ~/.rvm/gemsets/global.gems: .rvm_global_gems
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
