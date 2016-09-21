@@ -9,6 +9,8 @@ set expandtab
 set softtabstop=2
 
 set incsearch
+set smartcase
+set ignorecase
 
 set clipboard=unnamed,unnamedplus,autoselect
 set hls
@@ -34,9 +36,9 @@ set ruler
 set number
 
 " Mouse {{{
- set ttyfast
- set ttymouse=xterm2
- set mouse=a
+set ttyfast
+set ttymouse=xterm2
+set mouse=a
 " " }}}
 
 " Use ctrl-h,j,k,l to navagate VIM splits
@@ -46,7 +48,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Search
-nmap \ :Ack! 
+nmap \ :Ack!
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -86,10 +88,10 @@ Plugin 'wesQ3/vim-windowswap'
 call vundle#end()            " required
 
 
-" only open NERDTree on load if there are no arguments passed to vim 
+" only open NERDTree on load if there are no arguments passed to vim
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if argc() == 0
-autocmd vimenter * NERDTree
+  autocmd vimenter * NERDTree
 end
 
 set background=dark
@@ -119,7 +121,7 @@ noremap <Leader>l :Autoformat<CR>
 
 
 " Search
-nmap \ :Ack! 
+nmap \ :Ack!
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>

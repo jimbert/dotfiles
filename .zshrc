@@ -89,5 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias h="heroku"
 alias g="git"
+alias v="vim"
+alias vi="vim"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
