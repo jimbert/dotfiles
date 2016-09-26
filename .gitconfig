@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/jimfung/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
