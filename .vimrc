@@ -1,5 +1,4 @@
 set nocompatible
-filetype on
 syntax on
 filetype plugin indent on
 
@@ -12,7 +11,7 @@ set incsearch
 set smartcase
 set ignorecase
 
-set clipboard=unnamed,unnamedplus,autoselect
+"set clipboard=unnamed,unnamedplus,autoselect
 set hls
 set cursorline
 set cursorcolumn
