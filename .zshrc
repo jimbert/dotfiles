@@ -23,6 +23,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias h="heroku"
 alias g="git"
+alias gcm="git commit -m"
+alias ga='git add .'
 alias v="vim"
 alias vi="vim"
-alias gcm="git commit -m"
