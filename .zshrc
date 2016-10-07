@@ -26,5 +26,6 @@ alias g="git"
 alias gcm="git commit -m"
 alias ga='git add .'
 alias gcma='git commit -m -a'
+alias gdc='git diff --cached'
 alias v="vim"
 alias vi="vim"
