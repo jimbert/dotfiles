@@ -10,6 +10,7 @@ set softtabstop=2
 set incsearch
 set smartcase
 set ignorecase
+set backspace=indent,eol,start
 
 "set clipboard=unnamed,unnamedplus,autoselect
 set hls
@@ -86,7 +87,6 @@ Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()            " required
 
-
 " only open NERDTree on load if there are no arguments passed to vim
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if argc() == 0
@@ -114,8 +114,8 @@ let mapleader=","
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>r :NERDTreeFind<CR>
 map <silent> <Leader>i :!ctags -R . >/dev/null 2>&1 &<CR>
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>s :wa<CR>:call RunNearestSpec()<CR>
 noremap <Leader>l :Autoformat<CR>
 
 
@@ -124,3 +124,10 @@ nmap \ :Ack!
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+
+"Autoreload vimrc
+augroup load_vimrc
+      au!
+          autocmd bufwritepost .vimrc source ~/.vimrc
+        augroup END
+augroup END
