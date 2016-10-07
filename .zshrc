@@ -25,5 +25,6 @@ alias h="heroku"
 alias g="git"
 alias gcm="git commit -m"
 alias ga='git add .'
+alias gcma='git commit -m -a'
 alias v="vim"
 alias vi="vim"
