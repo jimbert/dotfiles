@@ -34,6 +34,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [alias]
+  a = add
 	co = checkout
 	s = status
 	d = diff
@@ -42,4 +43,5 @@
   ca = commit -a -m
 	bcleanup = !git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d
 	l = log
+	ri = rebase -i
 
