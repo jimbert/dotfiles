@@ -11,6 +11,8 @@
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.rvm/gemsets/global.gems: .rvm_global_gems
+    force: true
+    relink: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
