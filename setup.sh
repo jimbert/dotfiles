@@ -19,12 +19,7 @@ brew cask install alfred dropbox firefox github-desktop google-chrome istat-menu
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# grab my dotfiles
-git clone http://github.com/jimbert/dotfiles ~/.dotfiles
-
+# install my dotfiles
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_profile ~/.bash_profile.bak
 mv ~/.zshrc ~/.zshrc.bak
@@ -34,7 +29,7 @@ sh ~/.dotfiles/install
 
 # setup vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim -c PluginInstall
+vim +PluginInstall +qa
 
 # clean up the apple dock
 defaults write com.apple.dock persistent-apps -array
@@ -52,46 +47,50 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 # remove timemachine, volume, user, and spotlight from menu
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-    defaults write "${domain}" dontAutoLoad -array \
-          "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-              "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-                  "/System/Library/CoreServices/Menu Extras/User.menu"
-  done
-  sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+  defaults write "${domain}" dontAutoLoad -array \
+    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+    "/System/Library/CoreServices/Menu Extras/User.menu"
+done
+# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
-  # Disable automatic smart quotes
-  defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-  defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# Disable automatic smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-  # Disable the “Are you sure you want to open this application?” dialog
-  defaults write com.apple.LaunchServices LSQuarantine -bool false
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-  # Trackpad: enable tap to click for this user and for the login screen
-  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-  defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-  defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-  # Trackpad: map bottom right corner to right-click
-  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-  defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-  defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+# Trackpad: map bottom right corner to right-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-  # Increase sound quality for Bluetooth headphones/headsets
-  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-  # Save screenshots to ~/Desktop/screenshots
-  defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
+# Save screenshots to ~/Desktop/screenshots
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
 
-  # Show the full URL in the address bar (note: this still hides the scheme)
-  defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
-  # Install the Solarized Dark theme for iTerm
-  open "${HOME}/init/Solarized Dark.itermcolors"
+# Install the Solarized Dark theme for iTerm
+open "${HOME}/init/Solarized Dark.itermcolors"
 
-  # Don’t display the annoying prompt when quitting iTerm
-  defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-  # Automatically download apps purchased on other Macs
-  defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
+# Automatically download apps purchased on other Macs
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 done
