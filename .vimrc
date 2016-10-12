@@ -2,31 +2,42 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-set tabstop=2 shiftwidth=2 expandtab softtabstop=2
-set incsearch smartcase ignorecase hls
+set tabstop=2 
+set shiftwidth=2 
+set expandtab 
+set softtabstop=2
+set incsearch 
+set smartcase 
+set ignorecase 
+set hls
 set backspace=indent,eol,start
 
-"set clipboard=unnamed,unnamedplus,autoselect
-set cursorline cursorcolumn
+set cursorline 
+set cursorcolumn
 set noerrorbells visualbell t_vb=
 set noswapfile
 "folding settings
-set foldmethod=syntax foldnestmax=10 nofoldenable foldlevel=1
+set foldmethod=syntax 
+set foldnestmax=10 
+set nofoldenable 
+set foldlevel=1
 
 set ruler
 set number
 
-set ttyfast ttymouse=xterm2 mouse=a
+set ttyfast 
+set ttymouse=xterm2 
+set mouse=a
 
-let mapleader=","
+let mapleader="\<Space>"
 let NERDTreeShowHidden=1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ctrlp_show_hidden = 1
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
-map <Leader>i :silent !ctags -R . &> dev/null &<CR>:redraw!<CR>
-map <Leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
-map <Leader>s :wa<CR>:call RunNearestSpec()<CR>
+map <leader>i :silent !ctags -R . &> dev/null &<CR>:redraw!<CR>
+map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
+map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 " Use ctrl-h,j,k,l to navagate VIM splits
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -36,17 +47,23 @@ map <C-l> <C-W>l
 " Ruby hash rocket to new syntax
 map <leader>h :s/:\(\w\+\)\s*=>\s*/\1: /<CR>:noh<CR>
 
-noremap <Leader>l :Autoformat<CR>
+noremap <leader>l :Autoformat<CR>
 
 " Search
 nmap \ :Ack! 
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-nmap <silent> <Leader>r :NERDTreeFind<CR>
+nmap <silent> <leader>n :NERDTreeToggle<CR>
+nmap <silent> <leader>r :NERDTreeFind<CR>
+nmap <leader>p "+p
+nmap <leader>P "+P
+nmap <leader>o o<esc>
+nmap <leader>O O<esc>
 
 nnoremap Q <nop>
-nnoremap <Space> za
+nnoremap <Space> <nop>
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :noh<CR
+nnoremap <leader>w :w<CR>
+nnoremap <leader>a :AV<CR>
 
 
 " Vundle
