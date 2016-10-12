@@ -45,3 +45,5 @@
 	l = log
 	ri = rebase -i
 
+[rebase]
+	autosquash = true
