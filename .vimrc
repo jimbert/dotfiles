@@ -2,42 +2,21 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set softtabstop=2
-
-set incsearch
-set smartcase
-set ignorecase
+set tabstop=2 shiftwidth=2 expandtab softtabstop=2
+set incsearch smartcase ignorecase hls
 set backspace=indent,eol,start
 
 "set clipboard=unnamed,unnamedplus,autoselect
-set hls
-set cursorline
-set cursorcolumn
+set cursorline cursorcolumn
 set noerrorbells visualbell t_vb=
 set noswapfile
 "folding settings
-set foldmethod=syntax
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1
+set foldmethod=syntax foldnestmax=10 nofoldenable foldlevel=1
 
 set ruler
 set number
 
-" Mouse {{{
-set ttyfast
-set ttymouse=xterm2
-set mouse=a
-
-set background=dark
-let g:solarized_termcolors = 256
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
-highlight Normal ctermbg=None
+set ttyfast ttymouse=xterm2 mouse=a
 
 let mapleader=","
 let NERDTreeShowHidden=1
@@ -60,7 +39,7 @@ map <leader>h :s/:\(\w\+\)\s*=>\s*/\1: /<CR>:noh<CR>
 noremap <Leader>l :Autoformat<CR>
 
 " Search
-nmap \ :Ack!
+nmap \ :Ack! 
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>r :NERDTreeFind<CR>
 
@@ -98,6 +77,13 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()            " required
+
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+highlight Normal ctermbg=None
 
 " only open NERDTree on load if there are no arguments passed to vim
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
