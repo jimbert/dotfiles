@@ -1,8 +1,33 @@
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install common dependencies
-brew install fasd git ctags gcc vim zsh zsh-completions wget tmux the_silver_searcher openssl ruby postgres redis memcached rabbitmq gpg zsh-syntax-highlighting
+# Install core tools
+brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd git 
+
+# install nice to haves
+brew install wget the_silver_searcher openssl
+
+# Web dev specific
+brew install ruby postgres redis memcached rabbitmq gpg
+
+# install gnu tools over osx tools
+brew tap homebrew/dupes
+brew install coreutils
+brew install gcc
+brew install binutils
+brew install diffutils
+brew install ed --with-default-names
+brew install findutils --with-default-names
+brew install gawk
+brew install gnu-indent --with-default-names
+brew install gnu-sed --with-default-names
+brew install gnu-tar --with-default-names
+brew install gnu-which --with-default-names
+brew install gnutls
+brew install grep --with-default-names
+brew install gzip
+brew install watch
+brew install wdiff --with-gettext
 
 # for capybara webkit
 brew tap homebrew/versions
@@ -10,10 +35,7 @@ brew install qt55
 brew link --force qt55
 
 # install applications
-brew cask install alfred dropbox firefox github-desktop google-chrome istat-menus iterm2 licecap p4merge pgadmin3 rubymine screenhero slack spotify sublime sourcetree
-
-# install  seil, karabiner
-
+brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap pgadmin3 rubymine screenhero slack spotify sublime sourcetree
 
 # install rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3

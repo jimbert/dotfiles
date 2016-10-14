@@ -61,10 +61,9 @@ nmap <leader>O O<esc>
 nnoremap Q <nop>
 nnoremap <Space> <nop>
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR
+nnoremap <CR> :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>a :AV<CR>
-
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -85,6 +84,7 @@ Plugin 'dolph/vim-colors-solarized-black'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
+Plugin 'Chiel92/vim-autoformat'
 " Send commands to tmux
 Plugin 'jgdavey/tslime.vim'
 Plugin 'tpope/vim-endwise'

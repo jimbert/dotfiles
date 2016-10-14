@@ -29,3 +29,5 @@ alias gcma='git commit -m -a'
 alias gdc='git diff --cached'
 alias v="vim"
 alias vi="vim"
+alias ts="tmux new-session -s"
+alias ta="tmux a -t"
