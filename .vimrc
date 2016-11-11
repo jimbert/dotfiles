@@ -113,4 +113,3 @@ augroup load_vimrc
   au!
   autocmd bufwritepost .vimrc source ~/.vimrc
 augroup END
-augroup END
