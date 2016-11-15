@@ -17,7 +17,7 @@
 [push]
 	default = simple
 [credential]
-	helper = osxkeychain
+	helper = store --file ~/.git_credentials
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
