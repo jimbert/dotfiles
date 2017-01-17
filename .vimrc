@@ -35,7 +35,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ctrlp_show_hidden = 1
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
-map <leader>i :silent !ctags -R . &> dev/null &<CR>:redraw!<CR>
+map <leader>i :silent !ctags -R . &> /dev/null &<CR>:redraw!<CR>
 map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 " Use ctrl-h,j,k,l to navagate VIM splits
@@ -107,6 +107,23 @@ highlight Normal ctermbg=None
 if argc() == 0
   autocmd vimenter * NERDTree
 end
+
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects
+  " .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
+endif
 
 "Autoreload vimrc
 augroup load_vimrc
