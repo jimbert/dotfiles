@@ -1,6 +1,7 @@
+gem-ctags
 gem-wrappers
 rubygems-bundler
+bundler
 rake
 rvm
-gem-ctags
 ruby-beautify
