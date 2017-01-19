@@ -1,5 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export PATH="$PATH:$HOME/.rvm/bin" 
+export EDITOR=vim
 
 ZSH_THEME="bureau"
 
@@ -21,12 +22,10 @@ plugins=(git colored-man colorize heroku rvm vundle aws brew osx zsh-syntax-high
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# colorize ls
+alias ls='ls -GF'
 alias h="heroku"
 alias g="git"
-alias gcm="git commit -m"
-alias ga='git add .'
-alias gcma='git commit -m -a'
-alias gdc='git diff --cached'
 alias v="vim"
 alias vi="vim"
 alias ts="tmux new-session -s"
