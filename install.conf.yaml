@@ -5,16 +5,16 @@
 - clean: ['~']
 
 - link:
-    ~/.vimrc: .vimrc
-    ~/.bashrc: .bashrc
-    ~/.bash_profile: .bash_profile
-    ~/.irbrc: .irbrc
-    ~/.ackrc: .ackrc
-    ~/.gitignore_global: .gitignore_global
-    ~/.zshrc: .zshrc
-    ~/.gitconfig: .gitconfig
-    ~/.tmux.conf: .tmux.conf
-    ~/.rvm/gemsets/global.gems: .rvm_global_gems
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.irbrc: irbrc
+    ~/.ackrc: ackrc
+    ~/.gitignore_global: gitignore_global
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.rvm/gemsets/global.gems: rvm_global_gems
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -15,8 +15,8 @@ set backspace=indent,eol,start
 " skips prompts when autoreloading open buffers
 set autoread
 
-set cursorline 
-set cursorcolumn
+" set cursorline 
+" set cursorcolumn
 set noerrorbells visualbell t_vb=
 set noswapfile
 "folding settings
@@ -54,7 +54,6 @@ map <C-l> <C-W>l
 " Ruby hash rocket to new syntax
 map <leader>h :s/:\(\w\+\)\s*=>\s*/\1: /<CR>:noh<CR>
 
-noremap <leader>l :Autoformat<CR>
 
 " Search
 nmap \ :Ack! 
@@ -67,10 +66,10 @@ nmap <leader>O O<esc>
 
 nnoremap Q <nop>
 nnoremap <Space> <nop>
-"This unsets the "last search pattern" register by hitting return
 nnoremap <leader>/ :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>a :AV<CR>
+nnoremap <leader>l :Autoformat<CR>
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -114,23 +113,6 @@ highlight Normal ctermbg=None
 if argc() == 0
   autocmd vimenter * NERDTree
 end
-
-" if executable('ag')
-"   " Use Ag over Grep
-"   set grepprg=ag\ --nogroup\ --nocolor
-"
-"   " Use ag in CtrlP for listing files. Lightning fast and respects
-"   " .gitignore
-"   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden --ignore-dir .git -g "" %s'
-"
-"   " ag is fast enough that CtrlP doesn't need to cache
-"   let g:ctrlp_use_caching = 0
-"
-"   if !exists(":Ag")
-"     command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-"     nnoremap \ :Ag<SPACE>
-"   endif
-" endif
 
 "Autoreload vimrc
 augroup load_vimrc
