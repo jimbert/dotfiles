@@ -1,66 +1,20 @@
-set nocompatible
-syntax on
-filetype plugin indent on
-
-set tabstop=2 
-set shiftwidth=2 
-set expandtab 
-set softtabstop=2
-set incsearch 
-set smartcase 
-set ignorecase 
-set hls
-set backspace=indent,eol,start
-
-" skips prompts when autoreloading open buffers
-set autoread
-
-" set cursorline 
-" set cursorcolumn
-set noerrorbells visualbell t_vb=
-set noswapfile
-"folding settings
-set foldmethod=syntax 
-set foldnestmax=10 
-set nofoldenable 
-set foldlevel=1
-
-set ruler
-set number
-
-set ttyfast 
-set ttymouse=xterm2 
-set mouse=a
-
+" Mappings
 let mapleader="\<Space>"
-let NERDTreeShowHidden=1
-let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_use_caching = 0
-let g:ctrlp_show_hidden = 1
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-
 map <leader>i :silent !ctags -R . &> /dev/null &<CR>:redraw!<CR>
 map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 map <leader>u :checkt<CR>
 map <leader>z :q<CR>
+
 " Use ctrl-h,j,k,l to navagate VIM splits
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Ruby hash rocket to new syntax
-map <leader>h :s/:\(\w\+\)\s*=>\s*/\1: /<CR>:noh<CR>
-
-
-" Search
 nmap \ :Ack! 
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>r :NERDTreeFind<CR>
-nmap <leader>p "+p
-nmap <leader>P "+P
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 
@@ -71,48 +25,21 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>a :AV<CR>
 nnoremap <leader>l :Autoformat<CR>
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set nocompatible
+filetype off
 
-" Plug-in manager
-Plugin 'VundleVim/Vundle.vim'
-" Project search
-Plugin 'mileszs/ack.vim'
-" File search
-Plugin 'kien/ctrlp.vim'
-" Project directory
-Plugin 'scrooloose/nerdtree'
-" Relative line numbers
-Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
-" Solarized Black
-Plugin 'dolph/vim-colors-solarized-black'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
-Plugin 'Chiel92/vim-autoformat'
-" Send commands to tmux
-Plugin 'jgdavey/tslime.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'wesQ3/vim-windowswap'
-
-call vundle#end()            " required
+" This script contains my plugins
+source ~/.dotfiles/vim/plugins.vim
+" script for settings
+source ~/.dotfiles/vim/settings.vim
 
 set background=dark
 let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
-highlight Normal ctermbg=None
+highlight Normal ctermfg=250 ctermbg=None
 
-" only open NERDTree on load if there are no arguments passed to vim
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if argc() == 0
-  autocmd vimenter * NERDTree
-end
 
 "Autoreload vimrc
 augroup load_vimrc
