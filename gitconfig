@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
+	commentChar = %
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -22,11 +23,6 @@
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
-[merge]
-	tool = p4mergetool
-[mergetool "p4mergetool"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
-	trustExitCode = false
 [mergetool]
 	keepBackup = false
 [filter "lfs"]
