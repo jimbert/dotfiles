@@ -26,6 +26,7 @@ Plugin 'dolph/vim-colors-solarized-black'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
