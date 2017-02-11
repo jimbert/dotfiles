@@ -16,6 +16,7 @@ set ignorecase
 set smartcase 
 set hls
 set incsearch 
+set scrolloff=5
 " skips prompts when autoreloading open buffers
 set autoread
 set noerrorbells visualbell t_vb=
