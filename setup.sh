@@ -6,6 +6,8 @@ brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd git
 
 # install nice to haves
 brew install wget the_silver_searcher openssl
+brew install tmux-mem-cpu-load
+brew install reattach-to-user-namespace
 
 # Web dev specific
 brew install ruby postgres redis memcached rabbitmq gpg

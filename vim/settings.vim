@@ -6,6 +6,10 @@ if $TMUX == ''
 endif
 set backspace=indent,eol,start
 
+set tw=80
+set wrap linebreak nolist
+set nojoinspaces
+
 " tabs
 set expandtab 
 set shiftwidth=2 
@@ -29,6 +33,9 @@ set nofoldenable
 " line number settings
 set ruler
 set number
+
+set splitright
+set splitbelow
 
 if !has('nvim')
   set ttymouse=xterm2 

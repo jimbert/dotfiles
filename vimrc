@@ -5,6 +5,8 @@ map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 map <leader>u :checkt<CR>
 map <leader>z :q<CR>
+map <leader>= <C-W>=
+map <leader>+ <C-W>_<C-W><Bar>
 
 " Use ctrl-h,j,k,l to navagate VIM splits
 map <C-j> <C-W>j
