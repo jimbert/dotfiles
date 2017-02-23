@@ -18,6 +18,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
 Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
 
 " Theme
 Plugin 'dolph/vim-colors-solarized-black'
