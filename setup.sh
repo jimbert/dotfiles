@@ -2,7 +2,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install core tools
-brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd git 
+brew install tmux vim neovim zsh zsh-completions zsh-syntax-highlighting ctags fasd git
 
 # install nice to haves
 brew install wget the_silver_searcher openssl
