@@ -1,12 +1,7 @@
-if has('vim_starting')
-  set nocompatible
-endif
+let g:vim_bootstrap_langs = "javascript,ruby"
+let g:vim_bootstrap_editor = "nvim"
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
-
-let g:vim_bootstrap_langs = "html,javascript,python,ruby"
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
-
 if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""

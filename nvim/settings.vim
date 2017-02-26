@@ -79,6 +79,34 @@ else
   nnoremap <silent> <leader>sh :VimShellCreate<CR>
 endif
 
+" The silver surfer
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+  let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_show_hidden = 1
+endif
+
+" Disable visualbell
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
+"" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let NERDTreeShowHidden=1
+
+" only open NERDTree on load if there are no arguments passed to vim
+if argc() == 0
+  autocmd vimenter * NERDTree
+end
+
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
