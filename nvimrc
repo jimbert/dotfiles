@@ -23,7 +23,7 @@ if has('macunix')
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
 
-"" Vmap for maintain Visual Mode after shifting > and <
+"" Vmap for maintaining Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
 

@@ -7,6 +7,14 @@ map <leader>u :checkt<CR>
 map <leader>z :q<CR>
 map <leader>= <C-W>=
 map <leader>+ <C-W>_<C-W><Bar>
+
+" Use ctrl-h,j,k,l to navagate VIM splits
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+nmap \ :Ack!
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
@@ -33,13 +41,7 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Use ctrl-h,j,k,l to navagate VIM splits
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-nmap \ :Ack!
+set nocompatible
 filetype off
 
 " This script contains my plugins
