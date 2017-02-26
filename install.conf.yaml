@@ -15,6 +15,7 @@
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.rvm/gemsets/global.gems: rvm_global_gems
+    ~/.config/nvim/init.vim: nvimrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
