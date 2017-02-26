@@ -16,6 +16,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.rvm/gemsets/global.gems: rvm_global_gems
     ~/.config/nvim/init.vim: nvimrc
+    ~/.config/karabiner/karabiner.json: karabiner.json
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
