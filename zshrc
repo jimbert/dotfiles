@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export PATH="$PATH:$HOME/.rvm/bin" 
-export EDITOR=vim
+export EDITOR=nvim
 
 ZSH_THEME="bureau"
 
@@ -26,8 +26,8 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ls='ls -GF'
 alias h="heroku"
 alias g="git"
-alias v="vim"
-alias vi="vim"
+alias v="nvim"
+alias vi="nvim"
 alias ts="tmux new-session -s"
 alias ta="tmux a -t"
 alias t="tmux"
