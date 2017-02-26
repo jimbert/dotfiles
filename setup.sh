@@ -37,18 +37,13 @@ brew install qt55
 brew link --force qt55
 
 # install applications
-brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap pgadmin3 rubymine screenhero slack spotify sublime sourcetree
+brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap pgadmin3 screenhero slack spotify sublime sourcetree
 
 # install rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # install my dotfiles
-mv ~/.bashrc ~/.bashrc.bak
-mv ~/.bash_profile ~/.bash_profile.bak
-mv ~/.zshrc ~/.zshrc.bak
-mv ~/.gitconfig ~/.gitconfig.bak
-
 sh ~/.dotfiles/install
 
 # setup vim
@@ -76,7 +71,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     "/System/Library/CoreServices/Menu Extras/Volume.menu" \
     "/System/Library/CoreServices/Menu Extras/User.menu"
 done
-# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable automatic smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -90,17 +84,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Trackpad: map bottom right corner to right-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
-
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-# Save screenshots to ~/Desktop/screenshots
-defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
 
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
