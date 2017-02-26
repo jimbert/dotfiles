@@ -11,23 +11,27 @@ Plugin 'scrooloose/nerdtree'
 " Send commands in tmux
 Plugin 'jgdavey/tslime.vim'
 
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'tpope/vim-endwise'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-
 " Theme
 Plugin 'dolph/vim-colors-solarized-black'
 
 " Language specific
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tmhedberg/matchit'
+Plugin 'ecomba/vim-ruby-refactoring'
+
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'tpope/vim-endwise'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
+
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'Raimondi/delimitMate'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 

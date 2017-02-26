@@ -14,9 +14,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-nmap \ :Ack! 
+nmap \ :Ack!
 nmap <silent> <leader>n :NERDTreeToggle<CR>
-nmap <silent> <leader>r :NERDTreeFind<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 
@@ -26,6 +25,21 @@ nnoremap <leader>/ :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>a :AV<CR>
 nnoremap <leader>l :Autoformat<CR>
+
+noremap YY "+y<CR>
+noremap <leader>p "+pk<CR>
+noremap XX "+x<CR>
+
+"" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+"" Vmap for maintain Visual Mode after shifting > and <
+vmap < <gv
+vmap > >gv
+"" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 set nocompatible
 filetype off
@@ -41,7 +55,6 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
 highlight Normal ctermfg=250 ctermbg=None
-
 
 "Autoreload vimrc
 augroup load_vimrc
