@@ -5,3 +5,4 @@ bundler
 rake
 rvm
 ruby-beautify
+rubocop
