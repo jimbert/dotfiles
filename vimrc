@@ -19,6 +19,8 @@ nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 
+imap <C-l> <C-o>$<CR>
+
 nnoremap Q <nop>
 nnoremap <Space> <nop>
 nnoremap <leader>/ :noh<CR>

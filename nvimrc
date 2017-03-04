@@ -41,6 +41,10 @@ map <leader>z :q<CR>
 map <leader>= <C-W>=
 map <leader>+ <C-W>_<C-W><Bar>
 
+imap <C-l> <C-o>$
+imap <C-j> <C-o>o
+imap jj <esc>
+
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
