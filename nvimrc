@@ -12,7 +12,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " The Silver Searcher
-nmap \ :Ack!
+nmap \ :Ack! 
 
 noremap YY "+y<CR>
 noremap <leader>p "+pk<CR>
@@ -48,6 +48,7 @@ imap jj <esc>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
+nmap <leader>r <Plug>SetTmuxVars
 
 nnoremap Q <nop>
 nnoremap <Space> <nop>

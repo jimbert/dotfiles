@@ -45,6 +45,7 @@ Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+Plug 'w0rp/ale'
 
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
