@@ -25,7 +25,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # colorize ls
 alias ls='ls -GF'
 alias h="heroku"
-alias g="git"
+alias g="hub"
 alias v="nvim"
 alias vi="nvim"
 alias ts="tmux new-session -s"
