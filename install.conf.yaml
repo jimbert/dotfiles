@@ -17,6 +17,7 @@
     ~/.rvm/gemsets/global.gems: rvm_global_gems
     ~/.config/nvim/init.vim: nvimrc
     ~/.config/karabiner/karabiner.json: karabiner.json
+    ~/.tmuxinator/work.yml: tmuxinator/work.yml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
