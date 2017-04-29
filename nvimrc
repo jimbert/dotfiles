@@ -12,7 +12,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " The Silver Searcher
-nmap \ :Ack! 
+nmap \ :Ack!
 
 noremap YY "+y<CR>
 noremap <leader>p "+pk<CR>
@@ -43,19 +43,26 @@ map <leader>+ <C-W>_<C-W><Bar>
 
 imap <C-l> <C-o>$
 imap <C-j> <C-o>o
-imap jj <esc>
 
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 nmap <leader>r <Plug>SetTmuxVars
 
+nnoremap j gj
+nnoremap k gk
+
 nnoremap Q <nop>
 nnoremap <Space> <nop>
 nnoremap <leader>/ :noh<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>a :AV<CR>
 nnoremap <leader>l :Autoformat<CR>
+
+" remove trailing spaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+" Ctrl-E to switch between 2 last buffers
+nmap <C-E> :b#<CR>
 
 " Ruby refactor
 nnoremap <leader>rap  :RAddParameter<cr>

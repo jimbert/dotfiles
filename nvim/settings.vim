@@ -70,6 +70,7 @@ highlight Normal ctermfg=250 ctermbg=None
 
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+let g:tslime_always_current_session = 1
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
