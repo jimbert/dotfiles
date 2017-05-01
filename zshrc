@@ -4,40 +4,33 @@ export EDITOR=nvim
 
 ZSH_THEME="bureau"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
 plugins=(git colored-man colorize heroku rvm vundle aws brew osx zsh-syntax-highlighting fasd)
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# colorize ls
 alias ls='ls -GF'
-alias h="heroku"
-alias g="hub"
-alias v="nvim"
-alias vi="nvim"
-alias ts="tmux new-session -s"
-alias ta="tmux a -t"
-alias t="tmux"
-alias work="ssh jimfung@10.111.2.254"
+alias h='heroku'
+alias g='hub'
+alias v='nvim'
+alias vi='nvim'
+alias ts='tmux new-session -s'
+alias ta='tmux a -t'
+alias t='tmux'
+alias work='tmuxinator start work'
 alias ci='hub ci-status'
+alias follower='psql $(adhoc_follower_url)'
+alias follower_q='psql $(adhoc_follower_url) -c'
+alias ssh=color-ssh
 
 # fix the fucking touch bar
 function ftftb {
   pkill "Touch Bar agent"
   killall ControlStrip
+}
+
+function adhoc_follower_url {
+  heroku config:get AD_HOC_FOLLOWER_SHARED_PRODUCTION_DATABASE_URL -a transmetropolitan-production
 }
 
 # Usage:
@@ -68,6 +61,6 @@ color-ssh() {
     fi
     ssh $*
 }
+
 compdef _ssh color-ssh=ssh
 
-alias ssh=color-ssh
