@@ -6,3 +6,4 @@ rake
 rvm
 ruby-beautify
 rubocop
+tmuxinator

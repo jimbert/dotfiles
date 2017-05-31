@@ -4,7 +4,7 @@ export EDITOR=nvim
 
 ZSH_THEME="bureau"
 
-plugins=(git colored-man colorize heroku rvm vundle aws brew osx zsh-syntax-highlighting fasd)
+plugins=(git colored-man colorize heroku rvm brew osx zsh-syntax-highlighting fasd tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -21,7 +21,9 @@ alias work='tmuxinator start work'
 alias ci='hub ci-status'
 alias follower='psql $(adhoc_follower_url)'
 alias follower_q='psql $(adhoc_follower_url) -c'
-alias ssh=color-ssh
+# alias ssh=color-ssh
+alias rm='rm -i'
+alias shipment_status='follower < ~/sql/shipment_status.sql'
 
 # fix the fucking touch bar
 function ftftb {
@@ -50,17 +52,17 @@ tab-reset() {
 
 # Change the color of the tab when using SSH
 # reset the color after the connection closes
-color-ssh() {
-    if [[ -n "$ITERM_SESSION_ID" ]]; then
-        trap "tab-reset" INT EXIT
-        if [[ "$*" =~ "production|ec2-.*compute-1" ]]; then
-            tab-color 255 0 0
-        else
-            tab-color 0 50 0
-        fi
-    fi
-    ssh $*
-}
-
-compdef _ssh color-ssh=ssh
+# color-ssh() {
+#     if [[ -n "$ITERM_SESSION_ID" ]]; then
+#         trap "tab-reset" INT EXIT
+#         if [[ "$*" =~ "production|ec2-.*compute-1" ]]; then
+#             tab-color 255 0 0
+#         else
+#             tab-color 0 50 0
+#         fi
+#     fi
+#     ssh $*
+# }
+#
+# compdef _ssh color-ssh=ssh
 
