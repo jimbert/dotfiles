@@ -2,8 +2,8 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install core tools
-brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd git
-brew install neovim/neovim/neovim
+brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd \
+  git hub neovim/neovim/neovim heroku
 
 brew install python
 brew install python3
@@ -43,7 +43,8 @@ brew install qt55
 brew link --force qt55
 
 # install applications
-brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap pgadmin3 screenhero slack spotify sublime sourcetree
+brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
+  pgadmin3 screenhero slack spotify sublime sourcetree lastpass
 
 # install rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
