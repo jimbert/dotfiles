@@ -18,6 +18,9 @@ brew install reattach-to-user-namespace
 # Web dev specific
 brew install ruby postgres redis memcached rabbitmq gpg
 
+# install xcode command line tools
+xcode-select --install
+
 # install gnu tools over osx tools
 brew tap homebrew/dupes
 brew install coreutils
