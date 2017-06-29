@@ -1,10 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
-export PATH="$PATH:$HOME/.rvm/bin" 
 export EDITOR=nvim
 
 ZSH_THEME="bureau"
 
-plugins=(git colored-man colorize heroku rvm brew osx zsh-syntax-highlighting fasd tmuxinator)
+plugins=(git colored-man colorize heroku rbenv brew osx zsh-syntax-highlighting fasd tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -32,3 +31,5 @@ function ftftb {
 function adhoc_follower_url {
   heroku config:get AD_HOC_FOLLOWER_SHARED_PRODUCTION_DATABASE_URL -a transmetropolitan-production
 }
+eval "$(rbenv init -)"
+

@@ -3,7 +3,7 @@
 
 # Install core tools
 brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd \
-  git hub neovim/neovim/neovim heroku
+  git hub neovim/neovim/neovim heroku rbenv
 
 brew install python
 brew install python3
@@ -16,7 +16,7 @@ brew install tmux-mem-cpu-load
 brew install reattach-to-user-namespace
 
 # Web dev specific
-brew install ruby postgres redis memcached rabbitmq gpg
+brew install postgres redis memcached rabbitmq gpg
 
 # install xcode command line tools
 xcode-select --install
