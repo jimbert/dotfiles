@@ -1,6 +1,9 @@
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# install xcode command line tools for gcc
+xcode-select --install
+
 # Install core tools
 brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd \
   git hub neovim/neovim/neovim heroku rbenv
@@ -15,11 +18,9 @@ brew install wget the_silver_searcher openssl
 brew install tmux-mem-cpu-load
 brew install reattach-to-user-namespace
 
+
 # Web dev specific
 brew install postgres redis memcached rabbitmq gpg
-
-# install xcode command line tools
-xcode-select --install
 
 # install gnu tools over osx tools
 brew tap homebrew/dupes
@@ -41,38 +42,21 @@ brew install watch
 brew install wdiff --with-gettext
 
 # for capybara webkit
-brew tap homebrew/versions
-brew install qt55
-brew link --force qt55
+# brew tap homebrew/versions
+# brew install qt55
+# brew link --force qt55
 
 # install applications
 brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
-  pgadmin3 screenhero slack spotify sublime sourcetree lastpass
-
-# install rvm
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable --ruby
+  screenhero slack spotify sublime sourcetree lastpass karabiner-elements
 
 # install my dotfiles
 sh ~/.dotfiles/install
-
-# setup vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qa
 
 # clean up the apple dock
 defaults write com.apple.dock persistent-apps -array
 defaults write "Apple Global Domain" "_HIHideMenuBar" 1
 defaults write com.apple.dock autohide -bool true
-
-# Disabling the backswipe in Chrome
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-
-# Enabling UTF-8 ONLY in Terminal.app and setting the Pro theme by default
-defaults write com.apple.terminal StringEncodings -array 4
-defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 # remove timemachine, volume, user, and spotlight from menu
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
@@ -106,10 +90,8 @@ open "${HOME}/init/Solarized Dark.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# Automatically download apps purchased on other Macs
-defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
-
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 done
