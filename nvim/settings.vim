@@ -55,9 +55,6 @@ syntax on
 set ruler
 set number
 
-" let no_buffers_menu=1
-" set t_Co=256
-
 set laststatus=2
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ [line\ %l\/%L,\ col\ %c]
 
