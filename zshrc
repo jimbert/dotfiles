@@ -1,12 +1,13 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 
-ZSH_THEME="bureau"
-
 plugins=(git colored-man colorize heroku rbenv brew osx zsh-syntax-highlighting fasd tmuxinator)
+
+ZSH_THEME="bureau"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/work/config/work_aliases.sh
 
 alias ls='ls -GF'
 alias h='heroku'
@@ -18,9 +19,6 @@ alias ta='tmux a -t'
 alias t='tmux'
 alias work='tmuxinator start work'
 alias ci='hub ci-status'
-alias follower='psql $(adhoc_follower_url)'
-alias follower_q='psql $(adhoc_follower_url) -c'
-alias shipment_status='follower < ~/sql/shipment_status.sql'
 
 # fix the fucking touch bar
 function ftftb {
@@ -28,8 +26,5 @@ function ftftb {
   killall ControlStrip
 }
 
-function adhoc_follower_url {
-  heroku config:get AD_HOC_FOLLOWER_SHARED_PRODUCTION_DATABASE_URL -a transmetropolitan-production
-}
 eval "$(rbenv init -)"
 

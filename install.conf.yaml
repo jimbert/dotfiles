@@ -14,7 +14,6 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.rvm/gemsets/global.gems: rvm_global_gems
     ~/.config/nvim/init.vim: vimrc
     ~/.config/karabiner/karabiner.json: karabiner.json
     ~/.tmuxinator/work.yml: tmuxinator/work.yml
