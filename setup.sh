@@ -1,6 +1,12 @@
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+mkdir ~/Dropbox
+ln -s ~/Dropbox ~/personal
+mkdir ~/Google\ Drive
+ln -s ~/Google\ Drive ~/work
+mkdir ~/source
+
 # install xcode command line tools for gcc
 xcode-select --install
 
@@ -17,7 +23,6 @@ pip3 install neovim --upgrade
 brew install wget the_silver_searcher openssl
 brew install tmux-mem-cpu-load
 brew install reattach-to-user-namespace
-
 
 # Web dev specific
 brew install postgres redis memcached rabbitmq gpg
@@ -91,7 +96,7 @@ open "${HOME}/init/Solarized Dark.itermcolors"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # install oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 done
