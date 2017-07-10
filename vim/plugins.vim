@@ -1,51 +1,66 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+let g:vim_bootstrap_langs = "javascript,ruby"
+let g:vim_bootstrap_editor = "nvim"
 
-Plugin 'VundleVim/Vundle.vim'
+if has('nvim')
+  let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
+  if !filereadable(vimplug_exists)
+    echo "Installing Vim-Plug..."
+    echo ""
+    silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let g:not_finish_vimplug = "yes"
+
+    autocmd VimEnter * PlugInstall
+  endif
+  call plug#begin(expand('~/.config/nvim/plugged'))
+else
+  let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+  if !filereadable(vimplug_exists)
+    echo "Installing Vim-Plug..."
+    echo ""
+    silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let g:not_finish_vimplug = "yes"
+
+    autocmd VimEnter * PlugInstall
+  endif
+  call plug#begin(expand('~/.config/nvim/plugged'))
+endif
+
+" Required:
+
+let g:make = 'gmake'
+if exists('make')
+        let g:make = 'make'
+endif
+Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 " File navigation
-Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 " Send commands in tmux
-Plugin 'jgdavey/tslime.vim'
+Plug 'jgdavey/tslime.vim'
 
 " Theme
-Plugin 'dolph/vim-colors-solarized-black'
+Plug 'dolph/vim-colors-solarized-black'
 
 " Language specific
-Plugin 'tpope/vim-rails'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tmhedberg/matchit'
-Plugin 'ecomba/vim-ruby-refactoring'
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'pangloss/vim-javascript'
+Plug 'tmhedberg/matchit'
 
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'tpope/vim-endwise'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-endwise'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'w0rp/ale'
 
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'Raimondi/delimitMate'
-Plugin 'sheerun/vim-polyglot'
-
-call vundle#end()
-
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_use_caching = 0
-let g:ctrlp_show_hidden = 1
-
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-
-let NERDTreeShowHidden=1
-
-" only open NERDTree on load if there are no arguments passed to vim
-if argc() == 0
-  autocmd vimenter * NERDTree
-end
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'Raimondi/delimitMate'
+Plug 'sheerun/vim-polyglot'
+call plug#end()

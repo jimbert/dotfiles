@@ -1,7 +1,3 @@
-source ~/.dotfiles/nvim/plugins.vim
-source ~/.dotfiles/nvim/settings.vim
-
-" Mappings
 " Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
