@@ -46,11 +46,6 @@ brew install gzip
 brew install watch
 brew install wdiff --with-gettext
 
-# for capybara webkit
-# brew tap homebrew/versions
-# brew install qt55
-# brew link --force qt55
-
 # install applications
 brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
   screenhero slack spotify sublime sourcetree lastpass karabiner-elements
@@ -58,36 +53,8 @@ brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
 # install my dotfiles
 sh ~/.dotfiles/install
 
-# clean up the apple dock
-defaults write com.apple.dock persistent-apps -array
-defaults write "Apple Global Domain" "_HIHideMenuBar" 1
-defaults write com.apple.dock autohide -bool true
-
-# remove timemachine, volume, user, and spotlight from menu
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-  defaults write "${domain}" dontAutoLoad -array \
-    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-    "/System/Library/CoreServices/Menu Extras/User.menu"
-done
-
-# Disable automatic smart quotes
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-# Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+# macOS settings
+sh ./scripts/machine_setup/macOS.sh
 
 # Install the Solarized Dark theme for iTerm
 open "${HOME}/init/Solarized Dark.itermcolors"
