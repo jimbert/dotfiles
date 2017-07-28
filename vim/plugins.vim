@@ -1,36 +1,30 @@
 let g:vim_bootstrap_langs = "javascript,ruby"
 let g:vim_bootstrap_editor = "nvim"
 
+function InstallVimPlug(location)
+  let vimplug_path = expand(a:location)
+  if !filereadable(vimplug_path)
+    echo "Installing Vim-Plug..."
+    execute 'silent !\curl -fLo ' vimplug_path ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >& /dev/null'
+    let g:not_finish_vimplug = "yes"
+    autocmd VimEnter * PlugInstall
+  endif
+endfunction
+
 if has('nvim')
-  let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
-  if !filereadable(vimplug_exists)
-    echo "Installing Vim-Plug..."
-    echo ""
-    silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    let g:not_finish_vimplug = "yes"
-
-    autocmd VimEnter * PlugInstall
-  endif
-  call plug#begin(expand('~/.config/nvim/plugged'))
+  call InstallVimPlug('~/.config/nvim/autoload/plug.vim')
 else
-  let vimplug_exists=expand('~/.vim/autoload/plug.vim')
-  if !filereadable(vimplug_exists)
-    echo "Installing Vim-Plug..."
-    echo ""
-    silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    let g:not_finish_vimplug = "yes"
-
-    autocmd VimEnter * PlugInstall
-  endif
-  call plug#begin(expand('~/.config/nvim/plugged'))
+  call InstallVimPlug('~/.vim/autoload/plug.vim')
 endif
 
 " Required:
+call plug#begin(expand('~/.vim/plugged'))
 
 let g:make = 'gmake'
 if exists('make')
-        let g:make = 'make'
+  let g:make = 'make'
 endif
+
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 " File navigation
@@ -63,4 +57,5 @@ Plug 'w0rp/ale'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'sheerun/vim-polyglot'
+
 call plug#end()

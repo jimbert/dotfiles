@@ -42,7 +42,7 @@ set nofoldenable
 
 set lazyredraw
 
-set mouse=a
+" set mouse=a
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
@@ -90,7 +90,7 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 let NERDTreeShowHidden=1
 
 
