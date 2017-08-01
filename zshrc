@@ -19,6 +19,9 @@ alias ta='tmux a -t'
 alias t='tmux'
 alias work='tmuxinator start work'
 alias ci='hub ci-status'
+alias todo='nvim ~/work/todo.txt'
+alias be='bundle exec'
+alias circle='open $(hub ci-status -v | cut -d" " -f2)'
 
 # fix the fucking touch bar
 function ftftb {
