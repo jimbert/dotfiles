@@ -10,6 +10,7 @@ set bomb
 set binary
 
 set tw=120
+set colorcolumn=121
 set wrap linebreak nolist
 
 "" Tabs
