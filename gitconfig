@@ -36,7 +36,7 @@
 	l = log
 	ri = rebase -i
   branch-name = "!git rev-parse --abbrev-ref HEAD"
-  pu = "[[ $(git branch-name) != master  ]] && git push -u origin $(git branch-name)"
+  pu = "![[ $(git branch-name) != master  ]] && git push -u origin $(git branch-name)"
 [rebase]
 	autosquash = true
 [hub]
