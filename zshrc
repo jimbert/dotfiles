@@ -22,6 +22,7 @@ alias ci='hub ci-status'
 alias todo='nvim ~/work/todo.txt'
 alias be='bundle exec'
 alias circle='open $(hub ci-status -v | cut -d" " -f2)'
+alias f='fixops'
 
 # fix the fucking touch bar
 function ftftb {
