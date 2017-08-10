@@ -17,6 +17,7 @@
     ~/.config/nvim/init.vim: vimrc
     ~/.config/karabiner/karabiner.json: karabiner.json
     ~/.tmuxinator/work.yml: tmuxinator/work.yml
+    ~/.rubocop.yml: rubocop.yml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
