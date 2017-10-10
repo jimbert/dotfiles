@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 
-plugins=(colored-man colorize heroku rbenv zsh-syntax-highlighting tmuxinator)
+plugins=(colored-man colorize heroku rbenv fasd zsh-syntax-highlighting tmuxinator)
 
 ZSH_THEME="bureau"
 
