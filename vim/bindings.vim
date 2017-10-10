@@ -43,7 +43,7 @@ imap <C-j> <C-o>o
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
-nmap <leader>r <Plug>SetTmuxVars
+nmap <leader>T <Plug>SetTmuxVars
 
 nnoremap j gj
 nnoremap k gk
@@ -53,6 +53,7 @@ nnoremap <Space> <nop>
 nnoremap <leader>/ :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>l :Autoformat<CR>
+nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
