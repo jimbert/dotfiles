@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 
-plugins=(colored-man colorize heroku rbenv osx zsh-syntax-highlighting tmuxinator)
+plugins=(colored-man colorize heroku rbenv zsh-syntax-highlighting tmuxinator)
 
 ZSH_THEME="bureau"
 
@@ -23,6 +23,7 @@ alias todo='nvim ~/work/todo.txt'
 alias be='bundle exec'
 alias circle='open $(hub ci-status -v | cut -d" " -f2)'
 alias f='fixops'
+alias z='fasd_cd -d'
 
 # fix the fucking touch bar
 function ftftb {
