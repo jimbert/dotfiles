@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 
-plugins=(git colored-man colorize heroku rbenv brew osx zsh-syntax-highlighting fasd tmuxinator)
+plugins=(colored-man colorize heroku rbenv osx zsh-syntax-highlighting tmuxinator)
 
 ZSH_THEME="bureau"
 
@@ -31,4 +31,3 @@ function ftftb {
 }
 
 eval "$(rbenv init -)"
-
