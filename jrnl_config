@@ -1,0 +1,14 @@
+{
+  "default_hour": 17,
+  "timeformat": "%Y-%m-%d %H:%M",
+  "linewrap": 79,
+  "encrypt": false,
+  "editor": "nvim",
+  "default_minute": 0,
+  "highlight": true,
+  "journals": {
+    "default": "/Users/jim/Dropbox/eng_journal/journal.txt",
+    "personal": "/Users/jim/Dropbox/eng_journal/personal_journal.txt"
+  },
+  "tagsymbols": "@"
+}
