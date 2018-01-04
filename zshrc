@@ -32,5 +32,8 @@ function ftftb {
   pkill "Touch Bar agent"
   killall ControlStrip
 }
+function weather ()  {
+  curl http://wttr\.in/$1
+}
 
 eval "$(rbenv init -)"
