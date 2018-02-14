@@ -1,3 +1,5 @@
+source ~/.dotfiles/vim/Rename2.vim
+
 let g:vim_bootstrap_langs = "javascript,ruby"
 let g:vim_bootstrap_editor = "nvim"
 
@@ -34,6 +36,25 @@ Plug 'scrooloose/nerdtree'
 
 " Send commands in tmux
 Plug 'jgdavey/tslime.vim'
+
+" autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'fishbullet/deoplete-ruby'
+let g:deoplete#enable_at_startup = 1
+
+" Disable Deoplete when selecting multiple cursors starts
+function! Multiple_cursors_before()
+  if exists('*deoplete#disable')
+    exe 'call deoplete#disable()'
+  endif
+endfunction
+
+" Enable Deoplete when selecting multiple cursors ends
+function! Multiple_cursors_after()
+  if exists('*deoplete#enable')
+    exe 'call deoplete#enable()'
+  endif
+endfunction
 
 " Theme
 Plug 'dolph/vim-colors-solarized-black'

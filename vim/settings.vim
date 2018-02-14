@@ -2,7 +2,7 @@ syntax enable
 filetype plugin indent on
 set nocompatible
 
-"" Encoding
+" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -93,7 +93,7 @@ endif
 
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 let NERDTreeShowHidden=1
-
+let NERDTreeIgnore=['\.git$[[dir]]']
 
 "*****************************************************************************
 "" Autocmd Rules

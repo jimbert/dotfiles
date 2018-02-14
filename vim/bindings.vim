@@ -33,6 +33,8 @@ map <leader>i :silent !ctags -R --languages=ruby --exclude=.git --exclude=log $(
 map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 map <leader>u :checkt<CR>
+map <leader>L :!rufo %<CR> :checkt<CR>
+map <leader>` :source ~/.vimrc<CR>
 map <leader>z :q<CR>
 map <leader>= <C-W>=
 map <leader>+ <C-W>_<C-W><Bar>
