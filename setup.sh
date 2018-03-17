@@ -1,3 +1,6 @@
+# install xcode command line tools for gcc
+xcode-select --install
+
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -6,9 +9,6 @@ ln -s ~/Dropbox ~/personal
 mkdir ~/Google\ Drive
 ln -s ~/Google\ Drive ~/work
 mkdir ~/source
-
-# install xcode command line tools for gcc
-xcode-select --install
 
 # Install core tools
 brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd \
@@ -21,11 +21,10 @@ pip3 install neovim --upgrade
 
 # install nice to haves
 brew install wget the_silver_searcher openssl
-brew install tmux-mem-cpu-load
 brew install reattach-to-user-namespace
 
 # Web dev specific
-brew install postgres redis memcached rabbitmq gpg
+brew install postgres #redis memcached rabbitmq gpg
 
 # install gnu tools over osx tools
 brew tap homebrew/dupes
@@ -48,7 +47,7 @@ brew install wdiff --with-gettext
 
 # install applications
 brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
-  screenhero slack spotify sublime sourcetree lastpass karabiner-elements
+  screenhero slack spotify sublime lastpass karabiner-elements
 
 # install my dotfiles
 sh ~/.dotfiles/install
