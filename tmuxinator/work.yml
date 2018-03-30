@@ -5,5 +5,5 @@ root: <%= ENV['PWD'] %>
 
 windows:
   - editor: nvim
-  - test:
-  - term:
+  - shell:
+  - notes: nvim ./.app_notes
