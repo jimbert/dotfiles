@@ -19,6 +19,7 @@
     ~/.tmuxinator/work.yml: tmuxinator/work.yml
     ~/.rubocop.yml: rubocop.yml
     ~/.jrnl_config: jrnl_config
+    ~/ThorFile: thor_commands.rb
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
