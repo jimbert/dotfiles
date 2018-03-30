@@ -7,7 +7,12 @@ ZSH_THEME="bureau"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/work/config/work_aliases.sh
+
+work_alaises='~/work/config/work_aliases.sh'
+if [ -e "$work_aliases" ]
+then
+  source "$work_aliases"
+fi
 
 alias ls='ls -GF'
 alias h='heroku'
