@@ -11,12 +11,9 @@ ln -s ~/Google\ Drive ~/work
 mkdir ~/source
 
 # Install core tools
-brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd \
-  git hub neovim/neovim/neovim heroku rbenv
+brew install tmux vim zsh zsh-completions zsh-syntax-highlighting ctags fasd git hub neovim/neovim/neovim heroku rbenv
 
 brew install python
-brew install python3
-pip2 install neovim --upgrade
 pip3 install neovim --upgrade
 
 # install nice to haves
@@ -65,4 +62,3 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
-done
