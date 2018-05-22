@@ -1,5 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
+export TERM=screen-256color
+export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 plugins=(colored-man colorize heroku rbenv fasd zsh-syntax-highlighting tmuxinator)
 
