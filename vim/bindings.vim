@@ -36,6 +36,7 @@ map <leader>u :checkt<CR>
 map <leader>L :!rufo %<CR> :checkt<CR>
 map <leader>` :source ~/.vimrc<CR>
 map <leader>z :q<CR>
+map <leader>y i<% %><esc>F i
 map <leader>= <C-W>=
 map <leader>+ <C-W>_<C-W><Bar>
 
