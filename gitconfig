@@ -2,6 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 	commentChar = %
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
 	name = Jim Fung
 	email = jimtheengineer@gmail.com
@@ -37,6 +38,9 @@
 	ri = rebase -i
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   pu = "!sh ~/.dotfiles/scripts/git/push_to_origin_branch.sh"
+  nb = checkout -b
+  f = fetch
+  fixup = commit --fixup head
 [rebase]
 	autosquash = true
 [hub]

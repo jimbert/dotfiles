@@ -9,7 +9,7 @@ set fileencodings=utf-8
 set bomb
 set binary
 
-set tw=120
+" set tw=120
 set colorcolumn=121
 set wrap linebreak nolist
 

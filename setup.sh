@@ -41,6 +41,8 @@ brew install grep --with-default-names
 brew install gzip
 brew install watch
 brew install wdiff --with-gettext
+brew install bat
+brew install giff-so-fancy
 
 # install applications
 brew cask install alfred dropbox google-chrome istat-menus iterm2 licecap \
