@@ -20,6 +20,7 @@
     ~/.rubocop.yml: rubocop.yml
     ~/.jrnl_config: jrnl_config
     ~/ThorFile: thor_commands.rb
+    ~/.Brewfile: brewfile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

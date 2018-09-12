@@ -1,0 +1,89 @@
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/services"
+tap "homebrew/versions"
+
+cask "java"
+
+brew "ack"
+brew "bat"
+brew "binutils"
+brew "chromedriver", restart_service: true
+brew "cmake"
+brew "coreutils"
+brew "ctags"
+brew "diff-so-fancy"
+brew "diffutils"
+brew "ed", args: ["with-default-names"]
+brew "openssl"
+brew "fasd"
+brew "findutils", args: ["with-default-names"]
+brew "gawk"
+brew "gcc"
+brew "git"
+brew "gnu-indent", args: ["with-default-names"]
+brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-tar", args: ["with-default-names"]
+brew "gnu-which", args: ["with-default-names"]
+brew "gnupg"
+brew "grep", args: ["with-default-names"]
+brew "gzip"
+brew "hub"
+brew "imagemagick"
+brew "jrnl"
+brew "libxml2"
+brew "mas"
+brew "memcached"
+brew "neovim"
+brew "postgresql@9.5", restart_service: true, link: true
+brew "python"
+brew "qt@5.5", link: true
+brew "rabbitmq", restart_service: true
+brew "rabbitmq-c"
+brew "ruby-build"
+brew "rbenv"
+brew "reattach-to-user-namespace"
+brew "redis", restart_service: true
+brew "ruby"
+brew "speedtest-cli"
+brew "terminal-notifier"
+brew "the_silver_searcher"
+brew "tig"
+brew "tmux"
+brew "vim"
+brew "watch"
+brew "wget"
+brew "yarn"
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+brew "heroku/brew/heroku"
+
+cask "alfred"
+cask "dropbox"
+cask "firefox"
+cask "google-drive"
+cask "istat-menus"
+cask "iterm2"
+cask "java8"
+cask "karabiner-elements"
+cask "lastpass"
+cask "licecap"
+cask "rubymine"
+cask "sourcetree"
+cask "spotify"
+
+mas "1Password", id: 443987910
+mas "Evernote", id: 406056744
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "LastPass", id: 926036361
+mas "Magnet", id: 441258766
+mas "OmniGraffle", id: 1142578753
+mas "Quiver", id: 866773894
+mas "Spark", id: 1176895641
+mas "Todoist", id: 585829637
