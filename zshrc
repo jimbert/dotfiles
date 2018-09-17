@@ -1,15 +1,15 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+export ZSH_THEME="bureau"
 
-plugins=(colored-man colorize heroku rbenv fasd zsh-syntax-highlighting tmuxinator)
+plugins=(colored-man colorize rbenv fasd zsh-syntax-highlighting)
 
-ZSH_THEME="bureau"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-work_alaises='~/work/config/work_aliases.sh'
+work_aliases='~/work/config/work_aliases.sh'
 if [ -e "$work_aliases" ]
 then
   source "$work_aliases"
