@@ -1,9 +1,6 @@
-zmodload zsh/zprof
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
-# export TERM=screen-256color
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-export NPM_TOKEN=afac2b49-fedd-4492-a683-0b86e846907d
 
 plugins=(colored-man colorize heroku rbenv fasd zsh-syntax-highlighting tmuxinator)
 
