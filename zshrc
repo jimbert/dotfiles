@@ -5,7 +5,6 @@ export ZSH_THEME="bureau"
 
 plugins=(colored-man colorize rbenv fasd zsh-syntax-highlighting)
 
-
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -32,6 +31,8 @@ alias v='nvim'
 alias vi='nvim'
 alias work='tmuxinator start work'
 alias z='fasd_cd -d'
+alias t3pr='hub pull-request -l tier-3'
+alias pr='hub pull-request'
 
 # open circle-ci for the current project and branch
 circle() {
