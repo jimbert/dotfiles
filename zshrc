@@ -2,6 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 export ZSH_THEME="bureau"
+export DOTFILES_DIR=$HOME/.dotfiles
 
 plugins=(colored-man colorize rbenv fasd zsh-syntax-highlighting)
 
@@ -33,6 +34,7 @@ alias work='tmuxinator start work'
 alias z='fasd_cd -d'
 alias t3pr='hub pull-request -l tier-3'
 alias pr='hub pull-request'
+alias c='thor'
 
 # open circle-ci for the current project and branch
 circle() {

@@ -1,3 +1,4 @@
+DOTFILES_DIR=~/.dotfiles
 # install xcode command line tools for gcc
 xcode-select --install
 
@@ -5,7 +6,9 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install my dotfiles
-sh ~/.dotfiles/install
+sh $DOTFILES_DIR/install
+
+thor install $DOTFILES_DIR/thor_commands.thor
 
 brew bundle install --global
 
@@ -16,9 +19,6 @@ ln -s ~/Dropbox ~/personal
 mkdir ~/Google\ Drive
 ln -s ~/Google\ Drive ~/work
 mkdir ~/source
-
-# macOS settings
-sh ./scripts/machine_setup/macOS.sh
 
 # Install the Solarized Dark theme for iTerm
 open "${HOME}/init/Solarized Dark.itermcolors"
