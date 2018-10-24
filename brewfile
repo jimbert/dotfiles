@@ -10,7 +10,6 @@ cask "java"
 brew "ack"
 brew "bat"
 brew "binutils"
-brew "chromedriver", restart_service: true
 brew "cmake"
 brew "coreutils"
 brew "ctags"
@@ -25,21 +24,18 @@ brew "gcc"
 brew "git"
 brew "gnu-indent", args: ["with-default-names"]
 brew "gnu-sed", args: ["with-default-names"]
-brew "gnu-tar", args: ["with-default-names"]
 brew "gnu-which", args: ["with-default-names"]
 brew "gnupg"
 brew "grep", args: ["with-default-names"]
 brew "gzip"
 brew "hub"
-brew "imagemagick"
 brew "jrnl"
 brew "libxml2"
 brew "mas"
 brew "memcached"
 brew "neovim"
-brew "postgresql@9.5", restart_service: true, link: true
+brew "postgresql@9.6", restart_service: true, link: true
 brew "python"
-brew "qt@5.5", link: true
 brew "rabbitmq", restart_service: true
 brew "rabbitmq-c"
 brew "ruby-build"
@@ -79,8 +75,6 @@ cask "sourcetree"
 cask "spotify"
 
 mas "1Password", id: 443987910
-mas "Evernote", id: 406056744
-mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LastPass", id: 926036361
 mas "Magnet", id: 441258766
