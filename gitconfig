@@ -41,6 +41,7 @@
   nb = checkout -b
   f = fetch
   fixup = commit --fixup head
+  not-pushed = log --branches --not --remotes
 [rebase]
 	autosquash = true
 [hub]
