@@ -1,9 +1,10 @@
 # ~/.tmuxinator/work.yml
 
-name: <%= ENV['PWD'].split('/').last %>
+<% repo_name = ENV['PWD'].split('/').last %>
+name: <%= repo_name %>
 root: <%= ENV['PWD'] %>
 
 windows:
   - editor: nvim
   - shell:
-  - notes: nvim ./.app_notes
+  - notes: nvim ~/work/app_notes/<%= repo_name %>.notes
