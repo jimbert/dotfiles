@@ -1,6 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
-export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 export ZSH_THEME="bureau"
 export DOTFILES_DIR=$HOME/.dotfiles
 
