@@ -93,7 +93,7 @@ endif
 
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec} --format documentation\n")'
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.git$[[dir]]']
+let NERDTreeIgnore=['\..*$[[dir]]']
 
 "*****************************************************************************
 "" Autocmd Rules
