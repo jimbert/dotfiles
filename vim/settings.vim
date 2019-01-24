@@ -132,4 +132,11 @@ augroup END
 " Enable backup copies when editing crontab
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
+" Center the cursor on the page
+augroup VCenterCursor
+  au!
+  au BufEnter,WinEnter,WinNew,VimResized *,*.*
+        \ let &scrolloff=winheight(win_getid())/2
+augroup END
+
 set autoread

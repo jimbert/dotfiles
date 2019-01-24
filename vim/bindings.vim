@@ -31,6 +31,7 @@ vnoremap K :m '<-2<CR>gv=gv
 let mapleader="\<Space>"
 map <leader>i :silent !ripper-tags -R --exclude=.vendor<CR>:redraw!<CR>
 map <leader>t :wa<CR>:call RunCurrentSpecFile()<CR>
+map <leader>r :%s/\v
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
 map <leader>u :checkt<CR>
 map <leader>L :!rufo %<CR> :checkt<CR>
