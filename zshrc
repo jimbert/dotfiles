@@ -37,7 +37,7 @@ alias c='thor'
 
 # open circle-ci for the current project and branch
 circle() {
-  open $(ruby -e 'puts `hub ci-status -v | head -n1`.match(/(http.*)\//).to_s + "tree/" + `git branch-name`')
+  open $(ruby -e 'puts `hub ci-status -v | grep circleci | grep test`.match(/https.*/)')
 }
 
 # fix the fucking touch bar
