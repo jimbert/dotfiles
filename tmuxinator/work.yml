@@ -1,6 +1,6 @@
 # ~/.tmuxinator/work.yml
 
-<% repo_name = ENV['PWD'].split('/').last %>
+<% repo_name = ENV['PWD'].split('/').last.gsub('.','') %>
 name: <%= repo_name %>
 root: <%= ENV['PWD'] %>
 
