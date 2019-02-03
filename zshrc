@@ -8,15 +8,10 @@ plugins=(colored-man colorize rbenv fasd zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-work_aliases='~/work/config/work_aliases.sh'
-if [ -e "$work_aliases" ]
-then
-  source "$work_aliases"
-fi
+source "$HOME/work/config/work_aliases.sh"
 
 alias be='bundle exec'
 alias cat='bat'
-alias ci='hub ci-status'
 alias f='fixops'
 alias g='hub'
 alias h='heroku'
@@ -34,10 +29,28 @@ alias z='fasd_cd -d'
 alias t3pr='hub pull-request -l tier-3'
 alias pr='hub pull-request'
 alias c='thor'
+alias cc='codeclimate analyze $(git diff --name-only master | grep -v spec)'
+alias mt='git mergetool'
 
 # open circle-ci for the current project and branch
-circle() {
-  open $(ruby -e 'puts `hub ci-status -v | grep circleci | grep test`.match(/https.*/)')
+ci() {
+  open $(ruby $DOTFILES_DIR/scripts/circle.rb build_url)
+}
+
+ci_perf() {
+  ruby $DOTFILES_DIR/scripts/circle.rb slow_test_files
+}
+
+ci_slow() {
+  ruby $DOTFILES_DIR/scripts/circle.rb slow_tests
+}
+
+ci_failed() {
+  ruby $DOTFILES_DIR/scripts/circle.rb failed_tests
+}
+
+ci_rspec() {
+  bundle exec rspec $(ci_failed | grep spec)
 }
 
 # fix the fucking touch bar
