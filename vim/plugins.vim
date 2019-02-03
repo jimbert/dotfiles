@@ -34,9 +34,6 @@ Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
-" Send commands in tmux
-Plug 'jgdavey/tslime.vim'
-
 " autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fishbullet/deoplete-ruby'
@@ -63,7 +60,7 @@ Plug 'dolph/vim-colors-solarized-black'
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 Plug 'tmhedberg/matchit'
 
 Plug 'AndrewRadev/splitjoin.vim'
@@ -72,11 +69,11 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
 Plug 'w0rp/ale'
+Plug 'junegunn/vim-easy-align'
 
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Raimondi/delimitMate'
+" Plug 'Raimondi/delimitMate'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()

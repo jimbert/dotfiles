@@ -91,7 +91,7 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec} --format documentation\n")'
+let g:rspec_command = 'silent !tmux send -t :+1 "bundle exec rspec {spec} --format documentation" Enter'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\..*$[[dir]]']
 
