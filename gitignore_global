@@ -26,6 +26,8 @@ tags
 *.tar
 *.zip
 
+.codeclimate.yml
+
 # Logs and databases #
 ######################
 *.log
