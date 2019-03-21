@@ -9,22 +9,26 @@ class Circle
     circle_build_url.match(/\d+/)[0]
   end
 
+  def branch_name
+    `git branch-name`.strip
+  end
+
   def repo
     ENV['PWD'].split('/').last.delete('.')
   end
 
   def print_slow_tests
-    puts "For #{repo}, build #{circle_build_id}:"
+    puts "For #{repo}, branch: #{branch_name}, build: #{circle_build_id}:"
     puts CircleTestTime.new(repo, circle_build_id).slow_tests
   end
 
   def print_slow_test_files
-    puts "For #{repo}, build #{circle_build_id}:"
+    puts "For #{repo}, branch: #{branch_name}, build: #{circle_build_id}:"
     puts CircleTestTime.new(repo, circle_build_id).slow_test_files
   end
 
   def print_failed_tests
-    puts "For #{repo}, build #{circle_build_id}:"
+    puts "For #{repo}, branch: #{branch_name}, build: #{circle_build_id}:"
     result = CircleTestTime.new(repo, circle_build_id).failed_tests
 
     if result.empty?

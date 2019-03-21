@@ -1,2 +1,7 @@
 \x auto
+\timing
+
+\set x '\\setenv PAGER less'
+\set xx '\\setenv PAGER \'pspg -X -b\''
+\set vim '\\setenv PAGER \'vim -R -\''
 

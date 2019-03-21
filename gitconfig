@@ -1,5 +1,5 @@
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/jimfung/.gitignore_global
 	editor = vim
 	commentChar = %
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -35,6 +35,7 @@
   c = commit
   cm = commit -m
   ca = commit -a -m
+  cap = commit -a -m $1 && push
 	bcleanup = !git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d
 	l = log
 	ri = rebase -i
@@ -48,3 +49,12 @@
 	autosquash = true
 [hub]
 	protocol = https
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Coding/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/jimfung/.stCommitMsg
+  gpgsign = false

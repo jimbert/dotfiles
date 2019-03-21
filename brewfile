@@ -1,80 +1,132 @@
+tap "codeclimate/formulae"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-
-cask "java"
-
+# Search tool like grep, but optimized for programmers
 brew "ack"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# GNU binary tools for native development
 brew "binutils"
+# Cross-platform make
 brew "cmake"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Reimplementation of ctags(1)
 brew "ctags"
+# Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
+# File comparison utilities
 brew "diffutils"
-brew "ed", args: ["with-default-names"]
+# Classic UNIX line editor
+brew "ed"
+# SSL/TLS cryptography library
 brew "openssl"
+# Program that can automate interactive applications
+brew "expect"
+# CLI tool for quick access to files and directories
 brew "fasd"
+# Collection of GNU find, xargs, and locate
 brew "findutils", args: ["with-default-names"]
+# GNU awk utility
 brew "gawk"
+# GNU compiler collection
 brew "gcc"
+# Distributed revision control system
 brew "git"
+# C code prettifier
 brew "gnu-indent", args: ["with-default-names"]
-brew "gnu-sed", args: ["with-default-names"]
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU implementation of which utility
 brew "gnu-which", args: ["with-default-names"]
+# GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-brew "grep", args: ["with-default-names"]
-brew "gzip"
-brew "hub"
-brew "jrnl"
-brew "libxml2"
-brew "mas"
-brew "memcached"
-brew "neovim"
-brew "postgresql@9.6", restart_service: true, link: true
-brew "python"
-brew "rabbitmq", restart_service: true
-brew "rabbitmq-c"
-brew "ruby-build"
-brew "rbenv"
-brew "reattach-to-user-namespace"
-brew "redis", restart_service: true
-brew "ruby"
-brew "speedtest-cli"
-brew "terminal-notifier"
-brew "the_silver_searcher"
-brew "tig"
-brew "tldr"
-brew "tmux"
-brew "vim"
-brew "watch"
-brew "wget"
-brew "yarn"
-brew "zsh"
-brew "zsh-completions"
-brew "zsh-syntax-highlighting"
-brew "heroku/brew/heroku"
-
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
-
+# GNU grep, egrep and fgrep
+brew "grep"
+# Popular GNU data compression program
+brew "gzip"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# Command-line note taker
+brew "jrnl"
+# GNOME XML library
+brew "libxml2"
+# Mac App Store command-line interface
+brew "mas"
+# High performance, distributed memory object caching system
+brew "memcached"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Object-relational database system
+brew "postgresql@9.6", restart_service: true, link: true
+# Messaging broker
+brew "rabbitmq", restart_service: true
+# RabbitMQ C client
+brew "rabbitmq-c"
+# Install various Ruby versions and implementations
+brew "ruby-build"
+# Ruby version manager
+brew "rbenv"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
+# Persistent key-value database, with built-in net interface
+brew "redis", restart_service: true
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Text interface for Git repositories
+brew "tig"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# JavaScript package manager
+brew "yarn"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Code Climate CLI
+brew "codeclimate/formulae/codeclimate"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 cask "alfred"
 cask "dropbox"
-cask "istat-menus"
 cask "iterm2"
+cask "java"
 cask "karabiner-elements"
 cask "licecap"
 cask "rubymine"
 cask "sourcetree"
 cask "spotify"
-
-mas "1Password", id: 443987910
-mas "Kindle", id: 405399194
+mas "1Password 7", id: 1333542190
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "LastPass", id: 926036361
 mas "Magnet", id: 441258766
-mas "OmniGraffle", id: 1142578753
-mas "Quiver", id: 866773894
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Skitch", id: 425955336
 mas "Spark", id: 1176895641
-mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835

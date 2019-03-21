@@ -19,7 +19,7 @@ class CircleTestTime
 
   NUMBER_OF_CONTAINERS = 16
   SLOW_TEST_TIME = 1
-  PERF_RATIO_LIMIT = 0.9
+  PERF_RATIO_LIMIT = 0.8
 
   def initialize(app, build_id)
     @app = app
@@ -51,7 +51,7 @@ class CircleTestTime
     result
       .select { |_, v| (v.total_run_time / equal_split_time) > PERF_RATIO_LIMIT }
       .sort_by { |_, v| v.total_run_time }
-      .map { |k, v| "total_run_time: #{v.total_run_time.round(1)}s | ideal_split: #{equal_split_time.round(1)}s | ratio: #{(v.total_run_time / equal_split_time).round(1)} | average: #{v.avg.round(1)}s | #{k}" }
+      .map { |k, v| "total_run_time: #{v.total_run_time.round(2)}s(#{(v.total_run_time/60).round(2)}m) | ideal_split: #{equal_split_time.round(2)}s | ratio: #{(v.total_run_time / equal_split_time).round(2)} | average: #{v.avg.round(2)}s | #{k}" }
   end
 
   def failed_tests
