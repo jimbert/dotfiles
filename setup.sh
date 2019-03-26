@@ -16,8 +16,7 @@ pip3 install neovim --upgrade
 
 mkdir ~/Dropbox
 ln -s ~/Dropbox ~/personal
-mkdir ~/Google\ Drive
-ln -s ~/Google\ Drive ~/work
+ln -s ~/Google\ Drive\ File\ Stream/My\ Drive ~/work
 mkdir ~/source
 
 # Install the Solarized Dark theme for iTerm
