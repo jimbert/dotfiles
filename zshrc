@@ -3,14 +3,13 @@ export EDITOR=nvim
 export ZSH_THEME="bureau"
 export DOTFILES_DIR=$HOME/.dotfiles
 
-plugins=(colored-man colorize rbenv fasd zsh-syntax-highlighting)
+plugins=(colorize rbenv fasd web-search bundler jira)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source "$HOME/work/config/work_aliases.sh"
 
-alias be='bundle exec'
 alias cat='bat'
 alias f='fixops'
 alias g='hub'

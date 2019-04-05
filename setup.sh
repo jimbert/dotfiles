@@ -12,6 +12,9 @@ thor install $DOTFILES_DIR/thor_commands.thor
 
 brew bundle install --global
 
+# install rbenv default gems
+git clone https://github.com/rbenv/rbenv-default-gems.git $(rbenv root)/plugins/rbenv-default-gems
+
 pip3 install neovim --upgrade
 
 mkdir ~/Dropbox

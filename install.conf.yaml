@@ -21,6 +21,7 @@
     ~/.jrnl_config: jrnl_config
     ~/.Brewfile: brewfile
     ~/.psqlrc: psqlrc
+    ~/.rbenv/default-gems: rbenv_default_gems
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

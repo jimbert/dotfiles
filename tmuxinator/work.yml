@@ -6,5 +6,5 @@ root: <%= ENV['PWD'] %>
 
 windows:
   - editor: nvim
-  - shell:
+  - shell: ./bin/setup
   - notes: nvim ~/work/app_notes/<%= repo_name %>.notes

@@ -37,12 +37,8 @@ brew "gawk"
 brew "gcc"
 # Distributed revision control system
 brew "git"
-# C code prettifier
-brew "gnu-indent", args: ["with-default-names"]
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU implementation of which utility
-brew "gnu-which", args: ["with-default-names"]
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -107,10 +103,6 @@ brew "zsh"
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Code Climate CLI
-brew "codeclimate/formulae/codeclimate"
-# Everything you need to get started with Heroku
-brew "heroku/brew/heroku"
 cask "alfred"
 cask "dropbox"
 cask "iterm2"
