@@ -26,7 +26,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " Leader key
 let mapleader="\<Space>"
-map <leader>i :silent !ripper-tags -R --exclude=.vendor<CR>:redraw!<CR>
+map <leader>i :silent !sh ~/.dotfiles/scripts/ruby_tags.sh<CR>:redraw!<CR>
 map <leader>T :wa<CR>:call RunCurrentSpecFile()<CR>
 map <leader>t :wa<CR>:call RunLastSpec()<CR>
 map <leader>s :wa<CR>:call RunNearestSpec()<CR>
