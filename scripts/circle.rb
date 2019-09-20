@@ -2,11 +2,20 @@ require_relative 'circle_test_time'
 
 class Circle
   def circle_build_url
-    @circle_build_url ||= `hub ci-status -v | grep circleci | grep test`.match(/https.*/)[0]
+    `hub ci-status -v | grep circleci | grep test`.match(/https.*/).to_s
+  end
+
+  def open_circle_for_current_ref
+    build_url = circle_build_url
+    if build_url.empty?
+      puts 'No CircleCI link available'
+    else
+      `open #{build_url}`
+    end
   end
 
   def circle_build_id
-    circle_build_url.match(/\d+/)[0]
+    circle_build_url.match(/\d+/).to_s
   end
 
   def branch_name
@@ -45,7 +54,7 @@ requests = ARGV
 requests.map do |request|
   case request
   when 'build_url'
-    puts Circle.new.circle_build_url
+    Circle.new.open_circle_for_current_ref
   when 'slow_tests'
     Circle.new.print_slow_tests
   when 'slow_test_files'

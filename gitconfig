@@ -58,3 +58,5 @@
 [commit]
 	template = /Users/jimfung/.stCommitMsg
   gpgsign = false
+[init]
+	templatedir = /Users/jimfung/.git-templates

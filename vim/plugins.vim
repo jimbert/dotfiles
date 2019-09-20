@@ -33,6 +33,7 @@ Plug 'Shougo/vimproc.vim', {'do': g:make}
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'godlygeek/tabular'
 
 " autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -60,7 +61,7 @@ Plug 'dolph/vim-colors-solarized-black'
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-"Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'tmhedberg/matchit'
 
 Plug 'AndrewRadev/splitjoin.vim'

@@ -33,7 +33,7 @@ alias mt='git mergetool'
 
 # open circle-ci for the current project and branch
 ci() {
-  open $(ruby $DOTFILES_DIR/scripts/circle.rb build_url)
+  ruby $DOTFILES_DIR/scripts/circle.rb build_url
 }
 
 ci_perf() {
