@@ -8,7 +8,10 @@ plugins=(colorize rbenv fasd web-search bundler jira)
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source "$HOME/work/config/work_aliases.sh"
+work_script="$HOME/work/config/work_aliases.sh"
+if [ -f $work_script ]; then
+  source $work_script
+fi
 
 alias cat='bat'
 alias f='fixops'
@@ -32,9 +35,9 @@ alias cc='codeclimate analyze $(git diff --name-only master | grep -v spec)'
 alias mt='git mergetool'
 
 # open circle-ci for the current project and branch
-ci() {
-  ruby $DOTFILES_DIR/scripts/circle.rb build_url
-}
+  ci() {
+    ruby $DOTFILES_DIR/scripts/circle.rb build_url
+  }
 
 ci_perf() {
   ruby $DOTFILES_DIR/scripts/circle.rb slow_test_files
