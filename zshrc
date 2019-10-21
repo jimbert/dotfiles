@@ -2,6 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
 export ZSH_THEME="bureau"
 export DOTFILES_DIR=$HOME/.dotfiles
+export PATH="/usr/local/sbin:$PATH"
 
 plugins=(colorize rbenv fasd web-search bundler jira)
 
