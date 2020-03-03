@@ -1,10 +1,8 @@
-# ~/.tmuxinator/work.yml
-
 <% repo_name = ENV['PWD'].split('/').last.gsub('.','') %>
 name: <%= repo_name %>
 root: <%= ENV['PWD'] %>
 
 windows:
   - editor: nvim
-  - shell: sh ~/.dotfiles/scripts/repo_setup.sh >/dev/null &
+  - shell: sh ~/.dotfiles/scripts/repo_setup.sh
   - notes: nvim ~/work/app_notes/<%= repo_name %>.notes

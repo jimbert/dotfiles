@@ -15,3 +15,5 @@ unset fasd_cache
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 alias config='/usr/bin/git --git-dir=/Users/jimfung/.cfg/ --work-tree=/Users/jimfung'
 alias config='/usr/bin/git --git-dir=/Users/jimfung/.cfg/ --work-tree=/Users/jimfung'
+
+export PATH="$HOME/.bin:$PATH"
