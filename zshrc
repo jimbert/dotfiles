@@ -34,6 +34,7 @@ alias pr='hub pull-request'
 alias c='thor'
 alias cc='codeclimate analyze $(git diff --name-only master | grep -v spec)'
 alias mt='git mergetool'
+alias clear_dns='sudo killall -HUP mDNSResponder'
 
 # open circle-ci for the current project and branch
   ci() {
