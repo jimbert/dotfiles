@@ -2,7 +2,7 @@ require_relative 'circle_test_time'
 
 class Circle
   def circle_build_url
-    `hub ci-status -v | grep circleci | grep specs`.match(/https.*/).to_s
+    `hub ci-status -v | grep circleci | grep test`.match(/https.*/).to_s
   end
 
   def open_circle_for_current_ref
