@@ -95,6 +95,9 @@ let g:rspec_command = 'silent !tmux send -t :+1 "bundle exec rspec {spec} --form
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\..*$[[dir]]']
 
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************

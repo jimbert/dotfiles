@@ -37,6 +37,7 @@ map <leader>z :q<CR>
 map <leader>y i<% %><esc>F i
 map <leader>= <C-W>=
 map <leader>+ <C-W>_<C-W><Bar>
+map <C-Space> <esc>
 
 " a little moving around insert mode
 imap <C-j> <C-o>j

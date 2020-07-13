@@ -37,6 +37,8 @@ Plug 'godlygeek/tabular'
 
 " autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'fishbullet/deoplete-ruby'
 let g:deoplete#enable_at_startup = 1
 
