@@ -17,3 +17,4 @@ alias config='/usr/bin/git --git-dir=/Users/jimfung/.cfg/ --work-tree=/Users/jim
 alias config='/usr/bin/git --git-dir=/Users/jimfung/.cfg/ --work-tree=/Users/jimfung'
 
 export PATH="$HOME/.bin:$PATH"
+

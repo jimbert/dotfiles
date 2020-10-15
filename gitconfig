@@ -2,7 +2,7 @@
 	excludesfile = /Users/jimfung/.gitignore_global
 	editor = vim
 	commentChar = %
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	# pager = diff-so-fancy | less --tabs=4 -RFX
 	# make rebase on macOS safe <https://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
 [user]

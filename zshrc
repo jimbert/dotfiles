@@ -3,6 +3,7 @@ export EDITOR=nvim
 export ZSH_THEME="bureau"
 export DOTFILES_DIR=$HOME/.dotfiles
 export PATH="/usr/local/sbin:$PATH"
+export PATH=$PATH:~/.nodenv/bin
 
 plugins=(colorize rbenv fasd web-search bundler jira)
 
@@ -17,7 +18,6 @@ fi
 alias cat='bat'
 alias f='fixops'
 alias g='hub'
-alias h='heroku'
 alias j='jrnl'
 alias ls='ls -GF'
 alias q='nvim ~/work/questions.txt'
@@ -29,33 +29,10 @@ alias v='nvim'
 alias vi='nvim'
 alias work='tmuxinator start work'
 alias z='fasd_cd -d'
-alias t3pr='hub pull-request -l tier-3'
 alias pr='hub pull-request'
 alias c='thor'
-alias cc='codeclimate analyze $(git diff --name-only master | grep -v spec)'
 alias mt='git mergetool'
 alias clear_dns='sudo killall -HUP mDNSResponder'
-
-# open circle-ci for the current project and branch
-  ci() {
-    ruby $DOTFILES_DIR/scripts/circle.rb build_url
-  }
-
-ci_perf() {
-  ruby $DOTFILES_DIR/scripts/circle.rb slow_test_files
-}
-
-ci_slow() {
-  ruby $DOTFILES_DIR/scripts/circle.rb slow_tests
-}
-
-ci_failed() {
-  ruby $DOTFILES_DIR/scripts/circle.rb failed_tests
-}
-
-ci_rspec() {
-  bundle exec rspec $(ci_failed | grep spec)
-}
 
 # fix the fucking touch bar
 ftftb() {
@@ -67,4 +44,7 @@ weather()  {
   curl http://wttr\.in/$1
 }
 
+alias j8="JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/"
+
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
